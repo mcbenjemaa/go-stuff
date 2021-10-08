@@ -18,7 +18,7 @@ var Albums = []Album{
 }
 
 func (a Album) String() string {
-	return fmt.Sprintf("Album<%s %s %s %d>", a.ID, a.Title, a.Artist, a.Price)
+	return fmt.Sprintf("Album<%s %s %s %f>", a.ID, a.Title, a.Artist, a.Price)
 }
 
 // Handles Add ALbum

@@ -6,6 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-pg/pg/v10 v10.10.6
 	github.com/go-resty/resty/v2 v2.6.0
+	github.com/gorilla/mux v1.8.0
 	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
 )
 
