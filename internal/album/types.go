@@ -17,6 +17,10 @@ var Albums = []Album{
 	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
 }
 
+func (a Album) String() string {
+	return fmt.Sprintf("Album<%s %s %s %d>", a.ID, a.Title, a.Artist, a.Price)
+}
+
 // Handles Add ALbum
 func AddAlbum(a Album) {
 	// Add the new album to the slice.
