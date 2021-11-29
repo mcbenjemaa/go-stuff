@@ -1,0 +1,29 @@
+apiVersion: operator.example.com/v1alpha1
+kind: Cluster
+metadata:
+  name: cluster1
+spec:
+  kubernetesVersion: 1.21.0
+  nodeCount: 3
+  infra: aws # azure/gcp/openstack
+  machinePool: #
+  # - 
+  extras:
+  # - name: knative
+  #   repo: knative/knative
+  #   version:
+  #   credentials:  # secretRef
+  #    values:
+  #      image:
+  #        repository: ""
+  #        tag: ""
+  # 
+status:
+  conditions: # Conditions []Condition
+  - status: # True, False, Unknown
+    type: Ready # ConditionType 
+  phase: Ready
+       
+          
+          
+

@@ -1,0 +1,48 @@
+apiVersion: app.example.com/v1alpha1
+kind: App
+metadata:
+  name: app1
+  namespace: default
+  labels:
+    app.example.com/cluster: cluster1
+spec:
+ clusterRef: # Object Reference
+   apiVersion: operator.example.com/v1alpha1
+   kind: Cluster
+   metadata:
+     name: cluster1
+ repo: knative/knative
+ version: 0.2.0
+ #credentials:  # secretRef
+   # name:
+   # namespace:
+ values:
+   image:
+     repository: ""
+     tag: ""
+
+ kustomize: |
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: knative
+      namespace:
+    spec:
+      affinity: #
+ 
+ dependsOn:
+  - apiVersion: app.example.com/v1alpha1
+    kind: App
+    metadata:
+      name: app0
+      namespace: default
+
+status:
+  conditions: # Conditions []Condition
+  - status: # True, False, Unknown
+    type: Ready # ConditionType 
+  phase: Ready
+  # host:
+       
+          
+          
